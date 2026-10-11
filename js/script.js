@@ -24,3 +24,20 @@ if (menuToggle && navLinks) {
     });
   });
 }
+
+const themeButton = document.getElementById('themeButton');
+
+themeButton.addEventListener('click', function () {
+  document.body.classList.toggle('dark-mode');
+
+  // Check the current theme
+  if (document.body.classList.contains('dark-mode')) {
+    themeButton.textContent = '☀️';
+    themeButton.setAttribute('aria-label', 'Switch to light mode');
+    themeButton.setAttribute('title', 'Switch to light mode');
+  } else {
+    themeButton.textContent = '🌙';
+    themeButton.setAttribute('aria-label', 'Switch to dark mode');
+    themeButton.setAttribute('title', 'Switch to dark mode');
+  }
+});
