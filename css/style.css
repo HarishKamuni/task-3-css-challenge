@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --bg: #ffffff;
+  --text: #172033;
+  --card: #ffffff;
+  --soft: #f4f5ff;
+  --border: #e1e6f0;
+  --muted: #64748b;
+  --primary: #5738f5;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 3%;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--primary);
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--primary);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+#themeButton {
+  width: 45px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 25px;
+  background: var(--soft);
+  font-size: 20px;
+}
+
+#themeButton:hover {
+  transform: scale(1.08);
+}
+
+/* media query */
+@media (max-width: 900px) {
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    order: 3;
+    flex-wrap: wrap;
+    gap: 15px;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 8px 0;
+    text-align: center;
+  }
+}

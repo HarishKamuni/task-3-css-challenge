@@ -1,11 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Challenges</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <h2 class="logo">CSS<span>Lab</span></h2>
+
+      <ul class="nav-links" id="nav-links">
+        <li>
+          <a href="#home">Home</a>
+        </li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#animation">Animation</a></li>
+      </ul>
+      <div class="nav-btn">
+        <button
+          id="themeButton"
+          aria-label="Switch to dark mode"
+          title="Change theme"
+        >
+          🌙
+        </button>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <script src="js/script.js"></script>
+  </body>
 </html>
